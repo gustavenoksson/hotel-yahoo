@@ -7,11 +7,10 @@ The Gooh-Gooh Island is nicely located in the Yrgopelago.
 # Hotel Yahoo
 
 The Yahoo Hotel is the one and only on Gooh-Gooh Island. Our slogan is "There is Yahoo".
-More information on our website jonas128.se/hotel
 
 # Instructions
 
-If your project requires some installation or similar, please inform your user 'bout it. For instance, if you want a more decent indentation of your .php files, you could edit [.editorconfig]('/.editorconfig').
+For Your Information FYI: our website http://jonas128.se/hotel/
 
 # Code review
 
