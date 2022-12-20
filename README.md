@@ -1,12 +1,13 @@
 WHY NOT A GIF HERE? TO SET THE MODE.
 
-# Island name
+# Gooh-Gooh Island
 
-Some text about your lovely island
+The Gooh-Gooh Island is nicely located in the Yrgopelago.
 
-# Hotel name
+# Hotel Yahoo
 
-Why not add some info about the hotel of your dreams?
+The Yahoo Hotel is the one and only on Gooh-Gooh Island. Our slogan is "There is Yahoo".
+More information on our website jonas128.se/hotel
 
 # Instructions
 
