@@ -5,3 +5,11 @@ date {
   width: 100%;
   font-weight: bold;
 }
+
+slogan {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+}
