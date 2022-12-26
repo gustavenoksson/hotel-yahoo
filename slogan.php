@@ -1,7 +1,7 @@
 <slogan>
-                    <?php
-                    echo '"There is Yahoo"';
-                    ?>
+          <?php
+          echo 'Our slogan: "There is Yahoo"';
+          ?>
 </slogan>
 
 </body>

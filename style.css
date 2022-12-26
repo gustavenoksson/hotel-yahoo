@@ -6,6 +6,28 @@ date {
   font-weight: bold;
 }
 
+body {
+  display: flex;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+.history {
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+}
+
+/* button {
+  display: flex;
+  justify-content: center;
+} */
+
 slogan {
   position: fixed;
   display: flex;
