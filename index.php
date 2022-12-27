@@ -8,10 +8,10 @@ require __DIR__ . '/header.php';
 
 <main>
           <div class="history">
-                    <img width="500" alt="history" src="/images/historyyahoo.jpeg">
+                    <img width="350" height="200" alt="history" src="/images/historyyahoo.jpeg">
           </div>
 
-          <p>Yahoos are legendary beings in the 1726 satirical novel Gulliver's Travels written by Jonathan Swift. Their behaviour and character representation is meant to comment on the state of Europe from Swift's point of view. The word "yahoo" was coined by Jonathan Swift in the fourth section of Gulliver's Travels and has since entered the English language more broadly. Swift describes Yahoos as filthy with unpleasant habits, "a brute in human form," resembling human beings far too closely for the liking of protagonist Lemuel Gulliver. He finds the calm and rational society of intelligent horses, the Houyhnhnms, greatly preferable. The Yahoos are primitive creatures obsessed with "pretty stones" that they find by digging in mud, thus representing the distasteful materialism and ignorant elitism Swift encountered in Britain. Hence the term "yahoo" has come to mean "a crude, brutish or obscenely coarse person".</p>
+          <p>Yahoos are legendary beings in the 1726 satirical novel Gulliver's Travels written by Jonathan Swift. Their behaviour and character representation is meant to comment on the state of Europe from Swift's point of view. The word "yahoo" was coined by Jonathan Swift in the fourth section of Gulliver's Travels and has since entered the English language more broadly. Swift describes Yahoos as filthy with unpleasant habits, "a brute in human form," resembling human beings far too closely for the liking of protagonist Lemuel Gulliver. He finds the calm and rational society of intelligent horses, the Houyhnhnms, greatly preferable.</p>
 </main>
 
 <button type="submit">
