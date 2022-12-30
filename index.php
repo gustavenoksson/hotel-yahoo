@@ -1,6 +1,7 @@
 <?php
 // Always require autoload when using packages
 require(__DIR__ . '/vendor/autoload.php');
+require __DIR__ . '/hotelFunctions.php';
 require __DIR__ . '/header.php';
 ?>
 
