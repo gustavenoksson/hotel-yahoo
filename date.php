@@ -1,6 +1,6 @@
 <date>
-    <?php
-    echo 'Welcome to Hotel Yahoo ';
-    echo date('Y M D');
-    ?>
+          <?php
+          echo 'Welcome to Hotel Yahoo ';
+          echo date('Y M jS D');
+          ?>
 </date>
