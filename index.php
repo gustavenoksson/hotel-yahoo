@@ -11,12 +11,19 @@ require __DIR__ . '/header.php';
 
 <main>
           <div class="history">
-                    <img width="350" height="200" alt="history" src="images/gbgpelago.jpeg">
+                    <button id="light">
+                              Lights out button!
+                    </button>
+                    <img width="700" height="200" alt="history" src="images/pelago.jpeg">
           </div>
 
           <p>Yahoos are legendary beings in the 1726 satirical novel Gulliver's Travels written by Jonathan Swift. Their behaviour and character representation is meant to comment on the state of Europe from Swift's point of view. The word "yahoo" was coined by Jonathan Swift in the fourth section of Gulliver's Travels and has since entered the English language more broadly. Swift describes Yahoos as filthy with unpleasant habits, "a brute in human form," resembling human beings far too closely for the liking of protagonist Lemuel Gulliver. He finds the calm and rational society of intelligent horses, the Houyhnhnms, greatly preferable.</p>
+
           <div class="calendar">
-                    <h3>Room I January 2023</h3>
+                    <h3>Cheap room Close to Nature</h3>
+                    <!-- <button id="newroom">
+                              Change room
+                    </button> -->
                     <img width="350" height="350" alt="room1" src="images/room1.jpeg">
                     <table cellspacing="0">
                               <tbody>
@@ -86,21 +93,34 @@ require __DIR__ . '/header.php';
                               </tbody>
                     </table>
           </div>
+          <div class="change">
+                    <button id="newroom">
+                              CHANGE ROOM
+                    </button>
+          </div>
 
-          <button id="light">
-                    Lights out button!
-          </button>
+          <!-- <button id="newroom">
+                    Change room
+          </button> -->
 
           <form action="./booking.php" method="POST">
                     <label for="name">Name</label>
                     <input class="name" type="text" name="name">
 
-                    <label for="room">Room</label>
+                    <!-- <label for="room">Room</label>
                     <select name="room" class="choose-room">
                               <option value="1" id="budget">RoomI</option>
                               <option value="2" id="standard">RoomII</option>
                               <option value="3" id="luxury">RoomIII</option>
-                    </select>
+                    </select> -->
+
+
+
+                    <label for="arrival">Arrival</label>
+                    <input class="date" type="date" name="arrival" min="2023-01-01" max="2023-01-31" id="arrival">
+
+                    <label for="departure">Departure</label>
+                    <input class="date" type="date" name="departure" min="2023-01-01" max="2023-01-31" id="departure">
 
                     <p>Extras:</p>
 
@@ -118,12 +138,6 @@ require __DIR__ . '/header.php';
                               <!-- <p>3$</p> -->
                     </div>
 
-                    <label for="arrival">Arrival</label>
-                    <input class="date" type="date" name="arrival" min="2023-01-01" max="2023-01-31" id="arrival">
-
-                    <label for="departure">Departure</label>
-                    <input class="date" type="date" name="departure" min="2023-01-01" max="2023-01-31" id="departure">
-
                     <div class="total-cost">
                               <h3>Total cost: </h3>
                               <p>0 $</p>
@@ -137,6 +151,7 @@ require __DIR__ . '/header.php';
                     </button>
           </form>
 </main>
+
 
 
 
