@@ -1,6 +1,7 @@
-let button = document.querySelector('button');
+// let button = document.querySelector('button');
+let button = document.querySelector('light');
 
-button.addEventListener('click', () => {
+light.addEventListener('click', () => {
   if (document.body.style.backgroundColor == 'black') {
     document.body.style.backgroundColor = 'white';
   } else {

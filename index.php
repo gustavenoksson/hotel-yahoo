@@ -11,7 +11,7 @@ require __DIR__ . '/header.php';
 
 <main>
           <div class="history">
-                    <img width="350" height="200" alt="history" src="images/historyyahoo.jpeg">
+                    <img width="350" height="200" alt="history" src="images/gbgpelago.jpeg">
           </div>
 
           <p>Yahoos are legendary beings in the 1726 satirical novel Gulliver's Travels written by Jonathan Swift. Their behaviour and character representation is meant to comment on the state of Europe from Swift's point of view. The word "yahoo" was coined by Jonathan Swift in the fourth section of Gulliver's Travels and has since entered the English language more broadly. Swift describes Yahoos as filthy with unpleasant habits, "a brute in human form," resembling human beings far too closely for the liking of protagonist Lemuel Gulliver. He finds the calm and rational society of intelligent horses, the Houyhnhnms, greatly preferable.</p>
@@ -86,11 +86,59 @@ require __DIR__ . '/header.php';
                               </tbody>
                     </table>
           </div>
+
+          <button id="light">
+                    Lights out button!
+          </button>
+
+          <form action="./booking.php" method="POST">
+                    <label for="name">Name</label>
+                    <input class="name" type="text" name="name">
+
+                    <label for="room">Room</label>
+                    <select name="room" class="choose-room">
+                              <option value="1" id="budget">RoomI</option>
+                              <option value="2" id="standard">RoomII</option>
+                              <option value="3" id="luxury">RoomIII</option>
+                    </select>
+
+                    <p>Extras:</p>
+
+                    <div class="features">
+                              <input type="checkbox" name="features[]" value="4" id="food">
+                              <label for="features">A Gooh dish (2$)</label>
+                              <!-- <p>2$</p> -->
+
+                              <input type="checkbox" name="features[]" value="5" id="email">
+                              <label for="features">Yahoo e@mail service (1$)</label>
+                              <!-- <p>1$</p> -->
+
+                              <input type="checkbox" name="features[]" value="6" id="therapy">
+                              <label for="features">API therapist (3$)</label>
+                              <!-- <p>3$</p> -->
+                    </div>
+
+                    <label for="arrival">Arrival</label>
+                    <input class="date" type="date" name="arrival" min="2023-01-01" max="2023-01-31" id="arrival">
+
+                    <label for="departure">Departure</label>
+                    <input class="date" type="date" name="departure" min="2023-01-01" max="2023-01-31" id="departure">
+
+                    <div class="total-cost">
+                              <h3>Total cost: </h3>
+                              <p>0 $</p>
+                    </div>
+
+                    <label for="transfercode">Transfercode</label>
+                    <input class="transfer-code" type="text" name="transfercode">
+
+                    <button class="submit-button" type="submit" name="submit">
+                              BOOK A ROOM
+                    </button>
+          </form>
 </main>
 
-<button type="submit">
-          Please make a reservation!
-</button>
+
 
 <?php
 require __DIR__ . '/slogan.php';
