@@ -10,7 +10,7 @@ The Yahoo Hotel is the one and only on Gooh-Gooh Island. Our slogan is "There is
 
 # Instructions
 
-For Your Information FYI: our website http://jonas128.se/hotel/
+FYI (For Your Information): our website http://jonas128.se/hotel/
 
 # Code review
 
