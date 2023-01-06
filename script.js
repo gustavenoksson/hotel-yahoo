@@ -11,9 +11,9 @@ light.addEventListener('click', () => {
 
 let roomIndex = 0;
 const roomText = [
-  'Cheap room Close to Nature (4$) ->',
-  'The Old Boy Standard room (5$) ->',
-  'Yahoo Deluxe room (6$) ->',
+  'Cheap room Closer to Nature (4$) ->',
+  'The Old B(o)y Standard room (5$) ->',
+  'Yahoo Delux-API double room (6$) ->',
 ];
 const roomImg = ['images/room1.jpeg', 'images/room2.jpeg', 'images/room3.jpeg'];
 
