@@ -13,14 +13,14 @@ require __DIR__ . '/header.php';
           <div class="history">
                     <img width="700" height="200" alt="history" src="images/pelago.jpeg">
                     <button id="light">
-                              +light switch button+
+                              +hotel light switch button+
                     </button>
           </div>
 
           <p>Yahoos are legendary beings in the 1726 satirical novel Gulliver's Travels written by Jonathan Swift. The word "yahoo" was coined by Jonathan Swift in the fourth section of Gulliver's Travels and has since entered the English language more broadly.</p>
 
           <div class="calendar">
-                    <h3>Cheap room Close to Nature (4$) -></h3>
+                    <h3>Cheap room Closer to Nature (4$) -></h3>
                     <!-- <button id="newroom">
                               Change room
                     </button> -->
@@ -43,10 +43,10 @@ require __DIR__ . '/header.php';
                                                   <td></td>
                                                   <td></td>
                                                   <td></td>
-                                                  <td>1</td>
+                                                  <td class="r1">1</td>
                                         </tr>
                                         <tr>
-                                                  <td>2</td>
+                                                  <td class="r1">2</td>
                                                   <td>3</td>
                                                   <td>4</td>
                                                   <td>5</td>
@@ -56,18 +56,18 @@ require __DIR__ . '/header.php';
                                         </tr>
                                         <tr>
                                                   <td>9</td>
-                                                  <td>10</td>
+                                                  <td class="r2">10</td>
                                                   <td>11</td>
-                                                  <td>12</td>
-                                                  <td>13</td>
+                                                  <td class="r2">12</td>
+                                                  <td class="r1">13</td>
                                                   <td>14</td>
                                                   <td>15</td>
                                         </tr>
                                         <tr>
                                                   <td>16</td>
                                                   <td>17</td>
-                                                  <td>18</td>
-                                                  <td>19</td>
+                                                  <td class="r3">18</td>
+                                                  <td id="rr">19</td>
                                                   <td>20</td>
                                                   <td>21</td>
                                                   <td>22</td>
@@ -152,7 +152,7 @@ require __DIR__ . '/header.php';
                     <input class="transfer-code" type="text" name="transfercode">
 
                     <button class="submit-button" type="submit" name="submit">
-                              BOOK A ROOM
+                              BOOK ROOM
                     </button>
           </form>
 </main>

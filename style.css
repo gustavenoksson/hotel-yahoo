@@ -51,6 +51,23 @@ th {
   padding: 0;
 }
 
+th {
+  background-color: cornflowerblue;
+}
+td {
+  background-color: whitesmoke;
+}
+
+.g {
+  background: green;
+}
+.y {
+  background: yellowgreen;
+}
+.r {
+  background: red;
+}
+
 form {
   display: flex;
   align-items: center;
