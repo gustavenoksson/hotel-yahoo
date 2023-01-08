@@ -110,12 +110,12 @@ require __DIR__ . '/header.php';
                     <label for="name">Name</label>
                     <input class="name" type="text" name="name">
 
-                    <!-- <label for="room">Room</label>
+                    <label for="room">Room</label>
                     <select name="room" class="choose-room">
-                              <option value="1" id="budget">RoomI</option>
-                              <option value="2" id="standard">RoomII</option>
-                              <option value="3" id="luxury">RoomIII</option>
-                    </select> -->
+                              <option value="1" id="budget">1</option>
+                              <option value="2" id="standard">2</option>
+                              <option value="3" id="luxury">3</option>
+                    </select>
 
 
 
