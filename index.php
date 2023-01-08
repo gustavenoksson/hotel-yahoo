@@ -128,25 +128,21 @@ require __DIR__ . '/header.php';
                     <p>Extras:</p>
 
                     <div class="features">
-                              <input type="checkbox" name="features[]" value="4" id="food">
+                              <input type="checkbox" name="features[]" value="2" id="food">
                               <label for="features">A Gooh dish (2$)</label>
                               <!-- <p>2$</p> -->
 
-                              <input type="checkbox" name="features[]" value="5" id="email">
+                              <input type="checkbox" name="features[]" value="1" id="email">
                               <label for="features">Yahoo e@mail service (1$)</label>
                               <!-- <p>1$</p> -->
 
-                              <input type="checkbox" name="features[]" value="6" id="therapy">
+                              <input type="checkbox" name="features[]" value="3" id="therapy">
                               <label for="features">API therapist (3$)</label>
                               <!-- <p>3$</p> -->
                     </div>
 
                     <p>Please choose room & optional extras, enter your transfer code and click the book button!</p>
 
-                    <!-- <div class="total-cost">
-            <h3>Total cost: </h3>
-            <p>0 $</p>
-        </div> -->
 
                     <label for="transfercode">Transfercode</label>
                     <input class="transfer-code" type="text" name="transfercode">

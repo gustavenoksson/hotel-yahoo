@@ -13,13 +13,14 @@ $departureDate = $_POST['departure'];
 $transfercode = htmlspecialchars($_POST['transfercode'], ENT_QUOTES);
 
 $totalCost = 0;
-$featureCost = 0;
-
+$roomCost = $roomNumber + 3;
 
 echo "name: $name <br>";
 
 echo var_dump($roomNumber);
 echo "<br>";
+echo "room cost: $roomCost <br>";
+
 echo var_dump($arrivalDate);
 echo "<br>";
 var_dump($departureDate);
@@ -32,15 +33,15 @@ if (isset($_POST['features'])) {
                     var_dump($feature);
                     echo "<br>";
 
-                    $featureCost = 1;
-
-                    $totalCost = $totalCost + $featureCost;
+                    $totalCost = $totalCost + $feature;
           }
 }
+
 
 var_dump($transfercode);
 echo "<br>";
 
+$totalCost = $totalCost + $roomCost;
 echo "total cost: $totalCost <br>";
 
 
