@@ -111,13 +111,12 @@ require __DIR__ . '/header.php';
                     <input class="name" type="text" name="name">
 
                     <label for="room">Room</label>
-                    <select name="room" class="choose-room">
-                              <option value="1" id="budget">1</option>
-                              <option value="2" id="standard">2</option>
-                              <option value="3" id="luxury">3</option>
+                    <select name="room" id="choose-room">
+                              <option value="1" id="budget">Nature 4$</option>
+                              <option value="2" id="standard">Old B(o)y 5$</option>
+                              <option value="3" id="luxury">Delux-API 6$</option>
                     </select>
 
-                    <input type="hidden" name="roomI" class="roomI">
 
                     <label for="arrival">Arrival</label>
                     <input class="date" type="date" name="arrival" min="2023-01-01" max="2023-01-31" id="arrival">

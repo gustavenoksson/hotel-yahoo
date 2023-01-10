@@ -30,6 +30,9 @@ for (let i = 0; i < collection.length; i++) {
 newroom.addEventListener('click', () => {
   roomIndex++;
 
+  const $select = document.querySelector('#choose-room');
+  $select.value = roomIndex + 1;
+
   header.innerText = roomText[roomIndex];
   img.src = roomImg[roomIndex];
 
@@ -47,9 +50,6 @@ newroom.addEventListener('click', () => {
   if (roomIndex == 2) {
     roomIndex = -1;
   }
-  let element = document.getElementsByClassName('roomI');
-  element.value = roomIndex;
-  element.form.submit();
 });
 
 let rr = document.getElementById('rr');

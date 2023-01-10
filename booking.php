@@ -8,7 +8,6 @@ use GuzzleHttp\Exception\ClientException;
 
 $name = htmlspecialchars($_POST['name'], ENT_QUOTES);
 $roomNumber = $_POST['room'];
-$roomIndex = $_POST['roomI'];
 $arrivalDate = $_POST['arrival'];
 $departureDate = $_POST['departure'];
 $transferCode = htmlspecialchars($_POST['transfercode'], ENT_QUOTES);
@@ -17,12 +16,8 @@ $totalCost = 0;
 $roomCost = $roomNumber + 3;
 
 echo "name: $name <br>";
-
-echo var_dump($roomNumber);
-echo "<br>";
+echo "room number: $roomNumber <br>";
 echo "room cost: $roomCost <br>";
-echo "roomIndex: $roomIndex <br>";
-
 
 echo var_dump($arrivalDate);
 echo "<br>";
@@ -33,9 +28,7 @@ if (isset($_POST['features'])) {
           $features = $_POST['features'];
 
           foreach ($features as $feature) {
-                    var_dump($feature);
-                    echo "<br>";
-
+                    echo "feature cost: $feature <br>";
                     $totalCost = $totalCost + $feature;
           }
 }
