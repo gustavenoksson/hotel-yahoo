@@ -47,6 +47,9 @@ newroom.addEventListener('click', () => {
   if (roomIndex == 2) {
     roomIndex = -1;
   }
+  let element = document.getElementsByClassName('roomI');
+  element.value = roomIndex;
+  element.form.submit();
 });
 
 let rr = document.getElementById('rr');

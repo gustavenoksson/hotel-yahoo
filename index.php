@@ -117,7 +117,7 @@ require __DIR__ . '/header.php';
                               <option value="3" id="luxury">3</option>
                     </select>
 
-
+                    <input type="hidden" name="roomI" class="roomI">
 
                     <label for="arrival">Arrival</label>
                     <input class="date" type="date" name="arrival" min="2023-01-01" max="2023-01-31" id="arrival">
