@@ -1,6 +1,7 @@
 <?php
 
 require("./hotelFunctions.php");
+require("./bookFunctions.php");
 require "./vendor/autoload.php";
 
 use GuzzleHttp\Client;
@@ -13,7 +14,9 @@ $departureDate = $_POST['departure'];
 $transferCode = htmlspecialchars($_POST['transfercode'], ENT_QUOTES);
 
 $totalCost = 0;
+$totalFeature = 0;
 $roomCost = $roomNumber + 3;
+$roomTotal = 0;
 
 echo "name: $name <br>";
 echo "room number: $roomNumber <br>";
@@ -24,30 +27,100 @@ echo "<br>";
 var_dump($departureDate);
 echo "<br>";
 
+$numberOfNights = floor(strtotime($departureDate) / 86400) - floor(strtotime($arrivalDate) / 86400);
+echo "number of nights: $numberOfNights<br>";
+
+
 if (isset($_POST['features'])) {
           $features = $_POST['features'];
 
           foreach ($features as $feature) {
                     echo "feature cost: $feature <br>";
-                    $totalCost = $totalCost + $feature;
+                    $totalFeature = $totalFeature + $feature;
           }
+}
+echo "feature total: $totalFeature <br>";
+if ($totalFeature == 6) {
+          $totalFeature--;
+}
+echo "feature total with discount: $totalFeature <br>";
+
+echo "transfercode: $transferCode <br>";
+// var_dump($transferCode);
+// echo "<br>";
+
+$roomTotal = $roomCost * $numberOfNights;
+echo "total room cost: $roomTotal <br>";
+$totalCost = $roomTotal + $totalFeature;
+echo "total cost: $totalCost <br>";
+echo "booking in progress<br>";
+
+
+$hotelDb = connect('hotel.db');
+//Run the query that checks if the chosen room is available.
+$roomAvailable = checkRoomAvailability($hotelDb, $roomNumber, $arrivalDate, $departureDate);
+//If it adds upp so far. Start checking the transfercode.
+$validUUID = isValidUuid($transferCode);
+$transferCheck = transferCodeCheck($transferCode, $totalCost);
+
+// echo "room check database: ";
+// var_dump($roomAvailable);
+// echo "<br>";
+
+echo "transfercheck valid format: ";
+var_dump($validUUID);
+echo "<br>";
+
+echo "transfercheck total cost: ";
+var_dump($transferCheck);
+echo "<br>";
+// transferCodeDeposit($transferCode, 'Jonas');
+
+if (count($roomAvailable) === 0) {
+          if ($validUUID) {
+
+
+
+                    $insertQuery =
+                              'INSERT INTO bookings (room_id, arrival_date, departure_date, transfer_code, cost)
+                  VALUES (:roomtype, :arrivalDate, :departureDate, :transferCode, :cost)';
+                    $statement = $hotelDb->prepare($insertQuery);
+                    $statement->bindParam(':roomtype', $roomNumber, PDO::PARAM_INT);
+                    $statement->bindParam(':arrivalDate', $arrivalDate, PDO::PARAM_STR);
+                    $statement->bindParam(':departureDate', $departureDate, PDO::PARAM_STR);
+                    $statement->bindParam(':transferCode', $transferCode, PDO::PARAM_STR);
+                    $statement->bindParam(':cost', $totalCost, PDO::PARAM_INT);
+                    $statement->execute();
+
+                    $message = "Thanks $name, we have recieved your reservation.";
+
+                    $jsonResponse = [
+                              "island" => "Gooh-Gooh Island",
+                              "hotel" => "Hotel Yahoo",
+                              "arrival_date" => "$arrivalDate",
+                              "departure_date" => "$departureDate",
+                              "total_cost" => "$totalCost",
+                              "stars" => "3",
+                              "addtional_info" => "Welcome to Yahoo!"
+                    ];
+                    $bookingResponse = json_encode($jsonResponse);
+          } else {
+                    echo "Invalid transfercode!";
+          }
+} else {
+          echo "Room is already booked.";
 }
 
 
-var_dump($transferCode);
-echo "<br>";
 
-$totalCost = $totalCost + $roomCost;
-echo "total cost: $totalCost <br>";
-
-
-echo "booking in progress";
 require __DIR__ . '/header.php';
+
 ?>
 
 <main>
           <img width="300" height="300" alt="booked" src="images/booked.jpeg">
 </main>
 <?php
+echo "json kvitto: $bookingResponse";
 require __DIR__ . '/slogan.php';
 ?>
