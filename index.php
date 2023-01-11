@@ -79,11 +79,11 @@ require __DIR__ . '/header.php';
                                                   <td class="r1">26</td>
                                                   <td class="r1">27</td>
                                                   <td class="r1">28</td>
-                                                  <td class="r1">29</td>
+                                                  <td class="r1 r3">29</td>
                                         </tr>
                                         <tr>
-                                                  <td class="r1">30</td>
-                                                  <td class="r1">31</td>
+                                                  <td class="r1 r2">30</td>
+                                                  <td class="r1 r2">31</td>
                                                   <td></td>
                                                   <td></td>
                                                   <td></td>
