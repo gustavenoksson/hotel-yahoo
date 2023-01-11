@@ -17,7 +17,7 @@ require __DIR__ . '/header.php';
                     </button>
           </div>
 
-          <p>Yahoos are legendary beings in the 1726 satirical novel Gulliver's Travels written by Jonathan Swift. The word "yahoo" was coined by Jonathan Swift in the fourth section of Gulliver's Travels and has since entered the English language more broadly. The Yahoo Hotel is the one and only on Gooh-Gooh Island nicely located in the Yrgopelago.</p>
+          <p>Yahoos are legendary beings in the 1726 satirical novel Gulliver's Travels written by Jonathan Swift. The word "yahoo" was coined by Jonathan Swift in the fourth section of Gulliver's Travels and has since entered the English language more broadly. The Yahoo Hotel is the one and only on Gooh-Gooh Island nicely located in the Yrgopelago. Hotel Yahoo has no connection to <a href="https://sv.wikipedia.org/wiki/Sexbranschen">the sex industry</a>, but we do offer API therapy as an extra feature.</p>
 
           <div class="calendar">
                     <h3>Cheap room Closer to Nature (4$) -></h3>
