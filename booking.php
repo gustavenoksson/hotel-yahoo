@@ -13,7 +13,8 @@ $arrivalDate = $_POST['arrival'];
 $departureDate = $_POST['departure'];
 $transferCode = htmlspecialchars($_POST['transfercode'], ENT_QUOTES);
 
-$message = "";
+$bookingResponse = "non existent";
+$message = "->Sorry $name, but we could not complete this booking<-";
 $totalCost = 0;
 $totalFeature = 0;
 $roomCost = $roomNumber + 3;
@@ -23,10 +24,12 @@ echo "name: $name <br>";
 echo "room number: $roomNumber <br>";
 echo "room cost: $roomCost <br>";
 
-echo var_dump($arrivalDate);
-echo "<br>";
-var_dump($departureDate);
-echo "<br>";
+echo "arrival date: $arrivalDate<br>";
+echo "departure date: $departureDate<br>";
+// echo var_dump($arrivalDate);
+// echo "<br>";
+// var_dump($departureDate);
+// echo "<br>";
 
 $numberOfNights = floor(strtotime($departureDate) / 86400) - floor(strtotime($arrivalDate) / 86400);
 echo "number of nights: $numberOfNights<br>";
@@ -36,7 +39,7 @@ if (isset($_POST['features'])) {
           $features = $_POST['features'];
 
           foreach ($features as $feature) {
-                    echo "feature cost: $feature <br>";
+                    // echo "feature cost: $feature <br>";
                     $totalFeature = $totalFeature + $feature;
           }
 }
@@ -108,27 +111,25 @@ if (count($roomAvailable) === 0) {
                     $bookingResponse = json_encode($jsonResponse);
           } else {
                     if (!$validUUID) {
-                              echo "Invalid transfercode!<br>";
+                              echo "Invalid transfercode!</br>";
                     }
                     if (!$transferCheck) {
-                              echo "Low cash balance transfercode!";
+                              echo "Low cash balance transfercode!</br>";
                     }
           }
 } else {
-          echo "Room is already booked!";
+          echo "Room is already booked!</br>";
 }
 
-
+echo "$message</br>";
+echo "json kvitto: $bookingResponse";
 
 require __DIR__ . '/header.php';
-
 ?>
 
 <main>
           <img width="300" height="300" alt="booked" src="images/booked.jpeg">
 </main>
 <?php
-echo "$message</br>";
-echo "json kvitto: $bookingResponse";
 require __DIR__ . '/slogan.php';
 ?>

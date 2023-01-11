@@ -43,16 +43,16 @@ require __DIR__ . '/header.php';
                                                   <td></td>
                                                   <td></td>
                                                   <td></td>
-                                                  <td class="r1">1</td>
+                                                  <td class="r1 r2">1</td>
                                         </tr>
                                         <tr>
-                                                  <td class="r1">2</td>
-                                                  <td class="r3">3</td>
-                                                  <td class="r3">4</td>
-                                                  <td class="r3">5</td>
-                                                  <td class="r3">6</td>
-                                                  <td class="r3">7</td>
-                                                  <td class="r1">8</td>
+                                                  <td class="r1 r3">2</td>
+                                                  <td class="r2 r3">3</td>
+                                                  <td class="r2 r3">4</td>
+                                                  <td class="r2 r3">5</td>
+                                                  <td class="r1 r3">6</td>
+                                                  <td class="r1 r3">7</td>
+                                                  <td class="r1 r2">8</td>
                                         </tr>
                                         <tr>
                                                   <td class="r3">9</td>
@@ -67,7 +67,7 @@ require __DIR__ . '/header.php';
                                                   <td class="r2">16</td>
                                                   <td class="r1">17</td>
                                                   <td class="r3">18</td>
-                                                  <td id="rr">19</td>
+                                                  <td class="r3">19</td>
                                                   <td class="r3">20</td>
                                                   <td class="r3">21</td>
                                                   <td class="r3">22</td>
