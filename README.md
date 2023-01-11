@@ -1,4 +1,4 @@
-<img width="800" height="200" alt="booked" src="http://www.jonas128.se/hotel/heligoland.jpeg">
+<img width="700" height="200" alt="booked" src="http://www.jonas128.se/hotel/heligoland.jpeg">
 
 # Gooh-Gooh Island
 
