@@ -1,4 +1,4 @@
-WHY NOT A GIF HERE? TO SET THE MODE.
+<img width="300" height="200" alt="booked" src="http://www.jonas128.se/hotel/heligoland.jpeg">
 
 # Gooh-Gooh Island
 
