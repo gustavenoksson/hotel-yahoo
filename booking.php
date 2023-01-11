@@ -13,6 +13,7 @@ $arrivalDate = $_POST['arrival'];
 $departureDate = $_POST['departure'];
 $transferCode = htmlspecialchars($_POST['transfercode'], ENT_QUOTES);
 
+$message = "";
 $totalCost = 0;
 $totalFeature = 0;
 $roomCost = $roomNumber + 3;
@@ -53,13 +54,14 @@ $roomTotal = $roomCost * $numberOfNights;
 echo "total room cost: $roomTotal <br>";
 $totalCost = $roomTotal + $totalFeature;
 echo "total cost: $totalCost <br>";
-echo "booking in progress<br>";
+echo "booking in progress...<br>";
 
-
+// check database
 $hotelDb = connect('hotel.db');
-//Run the query that checks if the chosen room is available.
+
 $roomAvailable = checkRoomAvailability($hotelDb, $roomNumber, $arrivalDate, $departureDate);
-//If it adds upp so far. Start checking the transfercode.
+
+// check transfercode
 $validUUID = isValidUuid($transferCode);
 $transferCheck = transferCodeCheck($transferCode, $totalCost);
 
@@ -77,9 +79,9 @@ echo "<br>";
 // transferCodeDeposit($transferCode, 'Jonas');
 
 if (count($roomAvailable) === 0) {
-          if ($validUUID) {
+          if ($validUUID && $transferCheck) {
 
-
+                    transferCodeDeposit($transferCode, 'Jonas');
 
                     $insertQuery =
                               'INSERT INTO bookings (room_id, arrival_date, departure_date, transfer_code, cost)
@@ -92,7 +94,7 @@ if (count($roomAvailable) === 0) {
                     $statement->bindParam(':cost', $totalCost, PDO::PARAM_INT);
                     $statement->execute();
 
-                    $message = "Thanks $name, we have recieved your reservation.";
+                    $message = "->Congrats $name, successful booking<-";
 
                     $jsonResponse = [
                               "island" => "Gooh-Gooh Island",
@@ -105,10 +107,15 @@ if (count($roomAvailable) === 0) {
                     ];
                     $bookingResponse = json_encode($jsonResponse);
           } else {
-                    echo "Invalid transfercode!";
+                    if (!$validUUID) {
+                              echo "Invalid transfercode!<br>";
+                    }
+                    if (!$transferCheck) {
+                              echo "Low cash balance transfercode!";
+                    }
           }
 } else {
-          echo "Room is already booked.";
+          echo "Room is already booked!";
 }
 
 
@@ -121,6 +128,7 @@ require __DIR__ . '/header.php';
           <img width="300" height="300" alt="booked" src="images/booked.jpeg">
 </main>
 <?php
+echo "$message</br>";
 echo "json kvitto: $bookingResponse";
 require __DIR__ . '/slogan.php';
 ?>
