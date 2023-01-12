@@ -21,6 +21,7 @@ if (preg_match('/[0-9,a-z]+.json/', $argv[1])) {
 if (file_exists($logbook)) {
           // Two operations one the same line.
           $visits = json_decode(file_get_contents(__DIR__ . '/' . $logbook), true);
+          $visits = $visits['vacation'];
 } else {
           echo "No such file. \n";
           die();

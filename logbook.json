@@ -1,29 +1,115 @@
 {
   "vacation": [
     {
-      "island": "Anthrax island",
-      "hotel": "Budget hostel",
-      "arrival_date": "2023-01-01",
-      "departure_date": "2023-01-04",
-      "total_cost": "8",
-      "stars": "2",
-      "features": [{ "name": "Fruit basket for vitamin C", "cost": 1 }],
-      "addtional_info": "Thank you for saving a buck at Budget hostel."
+      "island": "Pelagon",
+      "hotel": "Moster Dagnys",
+      "arrival_date": "2023-01-26",
+      "departure_date": "2023-01-31",
+      "total_cost": 10,
+      "stars": "1",
+      "features": [],
+      "addtional_info": "Thank you for making the right choice by staying at Moster Dagnys. We hope you will enjoy your stay."
     },
+
     {
-      "island": "Isla Bellevue",
-      "hotel": "Grand central Hotel",
-      "arrival_date": "2023-01-05",
-      "departure_date": "2023-01-08",
-      "total_cost": "11",
-      "stars": "3",
-      "features": [{ "name": "Pinball machine", "cost": 3 }],
-      "addtional_info": [
+      "island": "Isla Rublar",
+      "hotel": "Dino Resort",
+      "arrival_date": "2023-01-23",
+      "departure_date": "2023-01-28",
+      "total_cost": "5",
+      "features": [],
+      "stars": "1",
+      "addtional_info": "At least Ruben, the hotel owner, had a blast this Christmas."
+    },
+
+    {
+      "island": "Point Nemo",
+      "hotel": "The Good Morrow",
+      "arrival_date": "2023-01-12",
+      "departure_date": "2023-01-14",
+      "total_cost": "9",
+      "stars": 5,
+      "features": [{ "name": "Poetry Waking", "cost": 3 }],
+      "additional_info": {
+        "message": "Very good. Enjoy your stay. But not too much, you might never leave."
+      }
+    },
+
+    {
+      "island": "Isla de los Monos",
+      "hotel": "Overwater Resort",
+      "arrival_date": "2023-01-16",
+      "departure_date": "2023-01-18",
+      "total_cost": 3,
+      "stars": "2",
+      "features": [],
+      "additional_info": "Thank you for choosing Overwater Resort."
+    },
+
+    {
+      "island": "island",
+      "hotel": "hotel",
+      "arrival_date": "2023-01-30",
+      "departure_date": "2023-01-31",
+      "total_cost": 10,
+      "stars": 3,
+      "features": [
+        { "name": "pool access", "cost": 3 },
+        { "name": "daily newspaper", "cost": 5 }
+      ],
+      "additional_info": "thank you for staying at the hotel hotel"
+    },
+
+    {
+      "island": "The Yellow Duck Island",
+      "hotel": "The Yellow Duck",
+      "arrival_date": "2023-01-03",
+      "departure_date": "2023-01-05",
+      "total_cost": "6",
+      "stars": "1",
+      "features": [],
+      "addtional_info": "Thank you for staying at the Yellow Duck!"
+    },
+
+    {
+      "island": "BO-BO-ISLAND",
+      "hotel": "BO-BO HOTEL",
+      "name": "Jonas",
+      "arrival_date": "2023-01-01",
+      "departure_date": "2023-01-03",
+      "total_cost": 6,
+      "stars": "1",
+      "features": [],
+      "additional_info": "See You Soon!"
+    },
+
+    {
+      "island": "Nomi island",
+      "hotel": "Nomis Hotel",
+      "arrival_date": "2023-01-27",
+      "departure_date": "2023-01-31",
+      "total_cost": 17,
+      "stars": "5",
+      "features": [
         {
-          "greeting": "Thank you for choosing Centralhotellet",
-          "video": "https://www.youtube.com/watch?v=5Ym-k30X5PY"
+          "name": "sauna",
+          "cost": 2
         }
-      ]
+      ],
+      "addtional_info": {
+        "greeting": "Thanks for choosing Nomis!"
+      }
+    },
+
+    {
+      "island": "Isle of Sg\u00e0il",
+      "hotel": "The Burnwood Estate",
+      "arrival_date": "2023-01-01",
+      "departure_date": "2023-01-01",
+      "total_cost": 5,
+      "stars": "3",
+      "features": [],
+      "additional_info": "Welcome to the The Burnwood Estate, we hope you enjoy your stay"
     }
   ]
 }
