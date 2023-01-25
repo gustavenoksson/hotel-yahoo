@@ -9,7 +9,6 @@ $totalCost = 0;
 
 function getRevenue()
 {
-
     $db = connect("hotel.db");
 
     $statement = $db->prepare("SELECT cost FROM bookings");
@@ -23,42 +22,47 @@ function getRevenue()
             $totalRevenue += $revenue;
         }
     }
-    echo "Total amount of revenue: " . $totalRevenue;
+    return $totalRevenue;
 };
 
 ?>
-<section class="vacationSection">
-    <?php
-    foreach ($vacation as $key => $hotelBookings) :
-        foreach ($hotelBookings as $hotelBooking) :
+<main>
+    <section class="vacationSection">
+        <p class="headlineBig">Bookings <br>↓</p>
+        <div class="vacationCards">
+            <?php
+            foreach ($vacation as $key => $hotelBookings) :
+                foreach ($hotelBookings as $hotelBooking) :
 
-            // Calculates the total costs of all bookings
-            $totalCost += (int) $hotelBooking["total_cost"];
-    ?>
-            <article class="vacationCard">
-                <p class="headline">Booking</p>
-                <p>Island: <?= $hotelBooking["island"] ?></p>
-                <p>Hotel: <?= $hotelBooking["hotel"] ?></p>
-                <p>Arrival Date: <?= $hotelBooking["arrival_date"] ?></p>
-                <p>Departure Date: <?= $hotelBooking["departure_date"] ?></p>
-                <p>Total Cost: <?= $hotelBooking["total_cost"] ?>$</p>
-            </article>
-    <?php
-        endforeach;
-    endforeach;
-    ?>
-    <article class="vacationFactBox">
-        <div>
-            <p class="headline">Booking Cost</p>
-            <p>Total amount spent on vacation: <?= $totalCost ?>$</p>
+                    // Calculates the total costs of all bookings
+                    $totalCost += (int) $hotelBooking["total_cost"];
+            ?>
+                    <article class="vacationCard">
+                        <p class="headlineSmall">Booking</p>
+                        <p>Island: <?= $hotelBooking["island"] ?></p>
+                        <p>Hotel: <?= $hotelBooking["hotel"] ?></p>
+                        <p>Arrival Date: <?= $hotelBooking["arrival_date"] ?></p>
+                        <p>Departure Date: <?= $hotelBooking["departure_date"] ?></p>
+                        <p>Total Cost: <?= $hotelBooking["total_cost"] ?>$</p>
+                    </article>
+            <?php
+                endforeach;
+            endforeach;
+            ?>
         </div>
-        <div>
-            <p class="headline">Hotel Revenue</p>
-            <p> <?php getRevenue() ?>$ </p>
-        </div>
-    </article>
-</section>
-
+        <p class="headlineBig">Factbox <br>↓</p>
+        <article class="vacationFactBox">
+            <div>
+                <p class="headlineSmall">Booking Cost</p>
+                <p>Total amount spent on vacation: <b><?= $totalCost ?>$</b></p>
+            </div>
+            <div>
+                <p class="headlineSmall">Hotel Revenue</p>
+                <p> Total amount of revenue: <b><?= getRevenue() ?>$</b> </p>
+            </div>
+        </article>
+        <a href="index.php"><button>BACK TO HOMEPAGE</button></a>
+    </section>
+</main>
 <?php
-
 require __DIR__ . '/slogan.php';
