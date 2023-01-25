@@ -102,7 +102,11 @@ slogan {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+}
+
+.heroImg {
+  height: 200px;
 }
 
 .vacationCards {
@@ -118,14 +122,13 @@ slogan {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: rgb(0, 0, 0);
   border: 1px solid;
 }
 
 .headlineBig {
   font-weight: bold;
   text-align: center;
-  font-size: 1.17em;
+  font-size: 18px;
 }
 
 .headlineSmall {
@@ -141,6 +144,7 @@ slogan {
 .vacationFactBox {
   display: flex;
   justify-content: space-evenly;
-  width: 50%;
+  align-items: center;
+  width: 70%;
   border: 1px solid;
 }

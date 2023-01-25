@@ -28,6 +28,7 @@ function getRevenue()
 ?>
 <main>
     <section class="vacationSection">
+        <img class="heroImg" src="/images/hotel3.ico" alt="">
         <p class="headlineBig">Bookings <br>↓</p>
         <div class="vacationCards">
             <?php
