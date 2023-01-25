@@ -94,3 +94,37 @@ slogan {
   bottom: 0;
   width: 100%;
 }
+
+/* Logbook.php */
+
+.vacationSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.headline {
+  font-weight: bold;
+}
+
+.vacationCard {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 188, 110);
+}
+
+.vacationCard p {
+  font-size: 18px;
+}
+
+.vacationFactBox {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: rgb(255, 218, 117);
+}
